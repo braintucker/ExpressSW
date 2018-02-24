@@ -9,6 +9,11 @@ app.set('view engine', 'ejs');
 //telling app to look for routes
 var routes = require('./routes');
 
+//finding directory of static assets
+var path = require('path');
+app.use(express.static(path.join(__dirname, "public")));
+
+
 //Routes
 
 //Home

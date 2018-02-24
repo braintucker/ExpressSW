@@ -12,7 +12,8 @@ app.set('view engine', 'ejs');
 //Home
 app.get('/', function(req, res){
   res.render('home', {
-    title: "Star Wars Movies"
+    title: "Star Wars Movies",
+    movies: ["1st", "2nd", "3rd", "4th", "5th", "6th"]
   });
 });
 

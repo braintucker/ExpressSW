@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/braintucker/ExpressSW/issues"
   },
-  "homepage": "https://github.com/braintucker/ExpressSW#readme"
+  "homepage": "https://github.com/braintucker/ExpressSW#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }

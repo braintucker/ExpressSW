@@ -9,9 +9,16 @@ app.get('/', function(req, res){
   res.send("this is the response from the server saying it got the request");
 });
 
-//Luke
-app.get('/luke', function(req, res){
-  res.send("this is a server response on the Luke page");
+//movie_single
+app.get('/star_wars_episode/:episode_number?', function(req, res){
+  var episode_number = req.params.episode_number;
+  res.send("this is the page for episode " + episode_number);
+});
+
+
+//notFound
+app.get('*', function(req, res){
+  res.send("this is not the page you are looking for...because it doesn't exist");
 });
 
 app.listen(3000, function(){

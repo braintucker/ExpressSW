@@ -29,20 +29,27 @@ exports.movie_single =  function(req, res){
       var main_characters = movie.main_characters;
 
     res.render('movie_single', {
-      //left variable accessable in our template file: right, what it represents
+      //left variable accessable in our template file: right, what value is being sent
       title: title,
       movies: movies,
       movie: movie,
       main_characters: main_characters
     });
   } else {
-    res.send("this is not the page you are looking for");
+    res.render('notFound', {
+      movies: movies,
+      title: "This is not the page you are looking for..."
+    });
   }
-
 };
 
 
 //notFound
 exports.notFound =  function(req, res){
-  res.send("this is not the page you are looking for...because it doesn't exist");
+  var movies = moviesJSON.movies;
+
+  res.render('notFound', {
+    movies: movies,
+    title: "This is not the page you are looking for..."
+  });
 };

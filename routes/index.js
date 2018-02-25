@@ -22,14 +22,19 @@ exports.movie_single =  function(req, res){
   //grabbing episode number from the req url that is created in app.js
   var episode_number = req.params.episode_number;
   var movies = moviesJSON.movies;
-  var movie = movies[episode_number-1];
-  var title = movie.title;
 
+  if (episode_number >= 1 && episode_number <= 6) {
+      var movie = movies[episode_number-1];
+      var title = movie.title;
 
-  res.render('movie_single', {
-    title: title,
-    movies: movies
-  })
+    res.render('movie_single', {
+      title: title,
+      movies: movies
+    });
+  } else {
+    res.send("this is not the page you are looking for");
+  }
+
 };
 
 

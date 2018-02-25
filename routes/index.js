@@ -19,8 +19,17 @@ exports.home =  function(req, res){
 
 //movie_single
 exports.movie_single =  function(req, res){
+  //grabbing episode number from the req url that is created in app.js
   var episode_number = req.params.episode_number;
-  res.send("this is the page for episode " + episode_number);
+  var movies = moviesJSON.movies;
+  var movie = movies[episode_number-1];
+  var title = movie.title;
+
+
+  res.render('movie_single', {
+    title: title,
+    movies: movies
+  })
 };
 
 

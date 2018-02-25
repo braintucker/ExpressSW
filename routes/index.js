@@ -29,7 +29,8 @@ exports.movie_single =  function(req, res){
 
     res.render('movie_single', {
       title: title,
-      movies: movies
+      movies: movies,
+      movie: movie
     });
   } else {
     res.send("this is not the page you are looking for");

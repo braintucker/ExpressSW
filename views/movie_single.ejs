@@ -22,6 +22,15 @@
           <p><%= movie.description %></p>
         </div>
 
+        <div class="main_characters">
+          <h2 class="movie-header">Main Characters</h2>
+          <ul>
+            <% for (var i = 0; i < main_characters.length; i++) {%>
+              <li><%= main_characters[i] %></li>
+            <% } %>
+          </ul>
+        </div>
+
       </div>
 
     </div>

@@ -7,7 +7,7 @@
 
     <% include partials/header.ejs %>
 
-    <div id="hero-image-single">
+    <div id="hero-image-single" style="background-image: url('/images/<%= movie.hero_image %>')">
       <h1 id="hero-title"><%= title %></h1>
     </div>
 
@@ -30,12 +30,8 @@
             <% } %>
           </ul>
         </div>
-
       </div>
-
     </div>
-
-
 
 
     <% include partials/scripts.ejs %>
